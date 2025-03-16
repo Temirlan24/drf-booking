@@ -1,0 +1,32 @@
+# Python-specific
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.eggs/
+*.pyo
+*.pyd
+.Python
+*.pdb
+
+# Virtual environment
+.venv/
+venv/
+ENV/
+env/
+venv.bak/
+
+# Django-specific
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+*.log
+
+# VSCode & PyCharm project files
+.vscode/
+.idea/
+
+# Mac and Linux system files
+.DS_Store
+*.swp
