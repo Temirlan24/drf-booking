@@ -21,9 +21,10 @@ COPY . .
 
 COPY nginx.conf /etc/nginx/sites-available/default
 
-RUN python manage.py collectstatic --noInput
+RUN python manage.py collectstatic --noinput
+
 RUN python manage.py migrate
 
 EXPOSE 80
 
-CMD ["sh", "-c", "gunicorn config.wsgi:application --bind 0.0.0.0:8000 & nginx - g 'daemon'"]
+CMD ["sh", "-c", "gunicorn config.wsgi:application --bind 0.0.0.0:8000 & nginx -g 'daemon off;'"]
